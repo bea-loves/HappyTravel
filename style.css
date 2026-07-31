@@ -1,0 +1,1909 @@
+/* ==========================================================
+                    GOOGLE FONTS
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* ==========================================================
+                        RESET
+========================================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    background:#F7F1E6;
+
+    color:#6D4C35;
+
+    font-family:"Quicksand",sans-serif;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    position:relative;
+
+}
+
+/* ==========================================================
+                    PALETA
+========================================================== */
+
+:root{
+
+    --bg:#F7F1E6;
+
+    --paper:#FFF8EF;
+
+    --brown:#A87755;
+
+    --brownDark:#6D4C35;
+
+    --cream:#FFFDF8;
+
+    --gold:#D7C6A6;
+
+    --shadow:0 10px 30px rgba(0,0,0,.12);
+
+    --radius:25px;
+
+}
+
+/* ==========================================================
+                DECORAÇÃO DO FUNDO
+========================================================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:90px;
+
+    background:
+    radial-gradient(circle at 45px 45px,#D6C39C 42px,transparent 43px),
+    radial-gradient(circle at 135px 45px,#D6C39C 42px,transparent 43px),
+    radial-gradient(circle at 225px 45px,#D6C39C 42px,transparent 43px),
+    radial-gradient(circle at 315px 45px,#D6C39C 42px,transparent 43px);
+
+    background-size:360px 90px;
+
+    opacity:.8;
+
+    z-index:-2;
+
+}
+
+body::after{
+
+    content:"✦     ☁      ☕      🍂      ✈      🤎";
+
+    position:fixed;
+
+    bottom:20px;
+
+    width:100%;
+
+    text-align:center;
+
+    font-size:22px;
+
+    opacity:.10;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================================
+                    GERAIS
+========================================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+section{
+
+    min-height:100vh;
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px 20px;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+button{
+
+    border:none;
+
+    cursor:pointer;
+
+    font-family:inherit;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+/* ==========================================================
+                    BOTÕES
+========================================================== */
+
+button{
+
+    background:#A87755;
+
+    color:white;
+
+    padding:15px 32px;
+
+    border-radius:18px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.15);
+
+}
+
+button:hover{
+
+    background:#8F6445;
+
+}
+
+/* ==========================================================
+                    MENU
+========================================================== */
+
+#settingsButton{
+
+    position:fixed;
+
+    top:25px;
+
+    right:25px;
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    font-size:26px;
+
+    z-index:999;
+
+}
+
+#menuPopup{
+
+    position:fixed;
+
+    top:95px;
+
+    right:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    background:var(--paper);
+
+    padding:20px;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    z-index:999;
+
+}
+
+#menuPopup button{
+
+    width:210px;
+
+}
+
+/* ==========================================================
+                        INTRO
+========================================================== */
+
+#intro{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    gap:20px;
+
+}
+
+#intro h1{
+
+    font-family:"Patrick Hand",cursive;
+
+    font-size:5.5rem;
+
+    color:var(--brownDark);
+
+    margin-bottom:5px;
+
+}
+
+#intro h1::after{
+
+    content:" ✈";
+
+}
+
+#intro h2{
+
+    font-family:"Patrick Hand",cursive;
+
+    font-size:2rem;
+
+    color:var(--brown);
+
+    margin-bottom:30px;
+
+}
+
+#intro p{
+
+    width:min(700px,95%);
+
+    background:var(--paper);
+
+    padding:45px;
+
+    border-radius:30px;
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+}
+
+#intro p::before{
+
+    content:"☁";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:25px;
+
+    font-size:32px;
+
+    opacity:.4;
+
+}
+
+#intro p::after{
+
+    content:"🤎";
+
+    position:absolute;
+
+    bottom:-18px;
+
+    right:25px;
+
+    font-size:28px;
+
+    opacity:.35;
+
+}
+
+#startButton{
+
+    margin-top:45px;
+
+    min-width:220px;
+
+    font-size:1.1rem;
+
+}
+
+/* ==========================================================
+                        HOME
+========================================================== */
+
+#home{
+
+    justify-content:space-between;
+
+    padding-top:100px;
+
+    padding-bottom:80px;
+
+}
+
+#home header{
+
+    text-align:center;
+
+}
+
+#home h1{
+
+    font-family:"Patrick Hand",cursive;
+
+    font-size:3.8rem;
+
+    margin-bottom:10px;
+
+}
+
+#destinationTitle{
+
+    font-size:1.5rem;
+
+    color:var(--brown);
+
+}
+
+#destinationTitle::after{
+
+    content:" ☁";
+
+}
+
+#home main{
+
+    width:min(650px,95%);
+
+    background:var(--paper);
+
+    padding:55px;
+
+    border-radius:30px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+#home main::before{
+
+    content:"🧳";
+
+    position:absolute;
+
+    top:-22px;
+
+    left:35px;
+
+    font-size:34px;
+
+    opacity:.45;
+
+}
+
+#home main::after{
+
+    content:"✦";
+
+    position:absolute;
+
+    bottom:-18px;
+
+    right:35px;
+
+    font-size:26px;
+
+    opacity:.45;
+
+}
+
+#home main p{
+
+    font-size:1.2rem;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+#openPresentButton{
+
+    width:240px;
+
+    font-size:18px;
+
+}
+
+/* ==========================================================
+                    POPUP MENU
+========================================================== */
+
+#menuPopup{
+
+    animation:menuAppear .25s ease;
+
+}
+
+#menuPopup button{
+
+    background:transparent;
+
+    color:var(--brownDark);
+
+    text-align:left;
+
+    box-shadow:none;
+
+    border-radius:12px;
+
+    padding:12px 15px;
+
+}
+
+#menuPopup button:hover{
+
+    background:#EFE4D6;
+
+    transform:none;
+
+}
+
+/* ==========================================================
+                    TÍTULOS
+========================================================== */
+
+h1{
+
+    letter-spacing:2px;
+
+}
+
+h2{
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================================
+                    PRESENTE
+========================================================== */
+
+#present{
+
+    justify-content:flex-start;
+
+    padding-top:80px;
+
+}
+
+.present-card{
+
+    width:min(950px,95%);
+
+    background:var(--paper);
+
+    border-radius:35px;
+
+    padding:45px;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+}
+
+.present-card::before{
+
+    content:"📜";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:35px;
+
+    font-size:34px;
+
+    opacity:.35;
+
+}
+
+.present-card::after{
+
+    content:"☕";
+
+    position:absolute;
+
+    bottom:-18px;
+
+    right:35px;
+
+    font-size:30px;
+
+    opacity:.35;
+
+}
+
+#presentTitle{
+
+    font-family:"Patrick Hand",cursive;
+
+    font-size:3rem;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    color:var(--brownDark);
+
+}
+
+#presentTitle::before{
+
+    content:"🤎 ";
+
+}
+
+#presentContent{
+
+    width:100%;
+
+    min-height:420px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    gap:25px;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+}
+
+#backButton{
+
+    display:block;
+
+    margin:40px auto 0;
+
+}
+
+
+/* ==========================================================
+                        CARTAS
+========================================================== */
+
+.letter{
+
+    width:100%;
+
+    max-width:720px;
+
+    margin:auto;
+
+    background:#FFFDF9;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    border:2px solid #E8D7BF;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    line-height:2;
+
+    font-size:18px;
+
+    position:relative;
+
+}
+
+.letter::before{
+
+    content:"🕊️";
+
+    position:absolute;
+
+    top:-18px;
+
+    left:25px;
+
+    font-size:28px;
+
+    opacity:.35;
+
+}
+
+.letter::after{
+
+    content:"🍂";
+
+    position:absolute;
+
+    bottom:-18px;
+
+    right:25px;
+
+    font-size:24px;
+
+    opacity:.35;
+
+}
+
+
+/* ==========================================================
+                        MENSAGENS
+========================================================== */
+
+.message{
+
+    width:100%;
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-size:20px;
+
+    line-height:2;
+
+    padding:25px;
+
+}
+
+.message h2{
+
+    font-family:"Patrick Hand",cursive;
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+
+/* ==========================================================
+                        IMAGENS
+========================================================== */
+
+.presentImage{
+
+    width:100%;
+
+    max-width:850px;
+
+    max-height:75vh;
+
+    object-fit:contain;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    border:8px solid white;
+
+}
+
+
+/* ==========================================================
+                        VÍDEOS
+========================================================== */
+
+.presentVideo{
+
+    width:100%;
+
+    max-width:900px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+
+}
+
+
+/* ==========================================================
+                        ÁUDIOS
+========================================================== */
+
+audio{
+
+    width:min(650px,100%);
+
+}
+
+
+/* ==========================================================
+                        PLAYLIST
+========================================================== */
+
+.playlistButton{
+
+    display:inline-block;
+
+    padding:18px 35px;
+
+    border-radius:18px;
+
+    background:var(--brown);
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.playlistButton:hover{
+
+    background:#8F6445;
+
+    transform:translateY(-4px);
+
+}
+
+
+/* ==========================================================
+                    IFRAMES
+========================================================== */
+
+iframe{
+
+    width:100%;
+
+    min-height:500px;
+
+    border:none;
+
+    border-radius:20px;
+
+}
+
+
+/* ==========================================================
+                    TEXTO GERAL
+========================================================== */
+
+#presentContent p{
+
+    margin-bottom:18px;
+
+}
+
+#presentContent h2{
+
+    margin-bottom:20px;
+
+    font-family:"Patrick Hand",cursive;
+
+}
+
+#presentContent h3{
+
+    margin:18px 0;
+
+}
+
+/* ===========================
+        PASSAPORTE
+=========================== */
+
+#passport{
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.passportCard{
+
+    position:relative;
+
+    width:min(900px,95%);
+
+    background:#FFF9F1;
+
+    border-radius:32px;
+
+    padding:55px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    border:3px dashed #D6B07C;
+
+}
+
+.passportCard::before{
+
+    content:"✈";
+
+    position:absolute;
+
+    top:-8px;
+
+    left:35px;
+
+    font-size:34px;
+
+    color:#A87755;
+
+    opacity:.18;
+
+    transform:rotate(-20deg);
+
+}
+
+.passportCard h2{
+
+    text-align:center;
+
+    font-family:"Patrick Hand",cursive;
+
+    font-size:3rem;
+
+    color:#6D4C35;
+
+    margin-bottom:5px;
+
+}
+
+.passportCard h3{
+
+    text-align:center;
+
+    font-size:1.4rem;
+
+    color:#8A6549;
+
+    margin-bottom:25px;
+
+}
+
+.passportCard hr{
+
+    margin:30px 0;
+
+    border:none;
+
+    border-top:2px dashed #D6B07C;
+
+}
+
+.passportInfo{
+
+    text-align:center;
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+}
+
+.stamps{
+
+    display:grid;
+
+    grid-template-columns:repeat(8,60px);
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin:35px auto;
+
+}
+
+.stamp{
+
+    width:54px;
+
+    height:54px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#FFFDF8;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    font-size:23px;
+
+}
+
+.stamp:hover{
+
+    transform:translateY(-4px) scale(1.05);
+
+    box-shadow:0 10px 18px rgba(0,0,0,.12);
+
+}
+
+.stamp small{
+
+    margin-top:3px;
+
+    font-size:.55rem;
+
+    color:#8A6549;
+
+    font-weight:700;
+
+}
+
+.stamp.empty{
+
+    opacity:.30;
+
+    cursor:default;
+
+    background:#EFE5D8;
+
+}
+
+.stamp.empty:hover{
+
+    transform:none;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+}
+
+.passportPhrase{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    font-style:italic;
+
+    color:#A87755;
+
+    font-size:1.15rem;
+
+}
+
+
+/* ==========================================================
+                    CARIMBOS
+========================================================== */
+
+.stamps{
+
+    display:grid;
+
+    grid-template-columns:repeat(8,1fr);
+
+    gap:12px;
+
+    margin:30px 0;
+
+    justify-items:center;
+
+}
+
+.stamp{
+
+    width:44px;
+
+    height:44px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#EAD8BE;
+
+    border-radius:12px;
+
+    font-size:24px;
+
+    box-shadow:0 4px 8px rgba(0,0,0,.08);
+
+    transform:rotate(-8deg);
+
+}
+
+.stamp:nth-child(even){
+
+    transform:rotate(8deg);
+
+}
+
+.stamp.empty{
+
+    background:#F5EBDD;
+
+    color:#D4C2AA;
+
+}
+
+
+/* ==========================================================
+                    CONFIGURAÇÕES
+========================================================== */
+
+#settings{
+
+    justify-content:flex-start;
+
+    padding-top:80px;
+
+}
+
+#settings h1{
+
+    font-family:"Patrick Hand",cursive;
+
+    font-size:3rem;
+
+    margin-bottom:35px;
+
+}
+
+#settings h1::before{
+
+    content:"⚙ ";
+
+}
+
+.settingsBox{
+
+    width:min(500px,95%);
+
+    background:var(--paper);
+
+    border-radius:28px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    position:relative;
+
+}
+
+.settingsBox::before{
+
+    content:"☕";
+
+    position:absolute;
+
+    top:-18px;
+
+    right:25px;
+
+    font-size:30px;
+
+    opacity:.35;
+
+}
+
+.settingsBox label{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px 0;
+
+    font-size:18px;
+
+}
+
+.settingsBox hr{
+
+    margin:20px 0;
+
+    border:none;
+
+    border-top:2px dashed #DCC9A0;
+
+}
+
+.settingsBox p{
+
+    text-align:center;
+
+    line-height:1.8;
+
+    opacity:.7;
+
+}
+
+.settingsBox input[type="checkbox"]{
+
+    width:22px;
+
+    height:22px;
+
+    accent-color:var(--brown);
+
+}
+
+#settings button{
+
+    margin-top:35px;
+
+}
+
+
+/* ==========================================================
+                    ANIMAÇÃO
+========================================================== */
+
+.passportCard,
+.settingsBox{
+
+    animation:fadeUp .45s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================================
+                        JOGOS
+========================================================== */
+
+.gameContainer{
+
+    width:min(950px,95%);
+
+    margin:auto;
+
+    background:var(--paper);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+    animation:fadeUp .35s ease;
+
+}
+
+.gameTitle{
+
+    font-family:"Patrick Hand",cursive;
+
+    font-size:2.8rem;
+
+    margin-bottom:30px;
+
+    color:var(--brownDark);
+
+}
+
+.gameTitle::before{
+
+    content:"🎲 ";
+
+}
+
+.gameText{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+}
+
+
+/* ==========================================================
+                        QUIZ
+========================================================== */
+
+.quizQuestion{
+
+    font-size:1.35rem;
+
+    margin-bottom:35px;
+
+    line-height:1.8;
+
+}
+
+.quizOptions{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:18px;
+
+    width:min(600px,100%);
+
+    margin:auto;
+
+}
+
+.quizOptions button{
+
+    background:#FFFDF8;
+
+    color:var(--brownDark);
+
+    border:2px solid #D8C3A8;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    font-size:17px;
+
+    box-shadow:none;
+
+}
+
+.quizOptions button:hover{
+
+    background:#EEDFCB;
+
+    transform:translateY(-3px);
+
+}
+
+
+/* ==========================================================
+                    MEMÓRIA
+========================================================== */
+
+.memoryGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+    width:min(650px,100%);
+
+    margin:30px auto;
+
+}
+
+.memoryCard{
+
+    aspect-ratio:1;
+
+    background:#DCC9A0;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.memoryCard:hover{
+
+    transform:scale(1.05);
+
+}
+
+.memoryCard.open{
+
+    background:white;
+
+}
+
+.memoryCard.matched{
+
+    background:#B7D8A8;
+
+}
+
+
+/* ==========================================================
+                    CORRIDA
+========================================================== */
+
+#raceCanvas{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+}
+
+canvas{
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+}
+
+
+/* ==========================================================
+                    RESULTADOS
+========================================================== */
+
+.successMessage{
+
+    font-size:30px;
+
+    color:#5A8C53;
+
+    margin-top:25px;
+
+    font-family:"Patrick Hand",cursive;
+
+}
+
+.failMessage{
+
+    font-size:28px;
+
+    color:#B85C5C;
+
+    margin-top:25px;
+
+    font-family:"Patrick Hand",cursive;
+
+}
+
+
+/* ==========================================================
+                BOTÕES DOS JOGOS
+========================================================== */
+
+.nextButton{
+
+    margin-top:35px;
+
+    min-width:220px;
+
+}
+
+
+/* ==========================================================
+                    ANIMAÇÕES
+========================================================== */
+
+.memoryCard,
+.quizOptions button{
+
+    transition:.25s;
+
+}
+
+.memoryCard:active{
+
+    transform:scale(.95);
+
+}
+
+.quizOptions button:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================================================
+                RESPONSIVIDADE
+========================================================== */
+
+@media (max-width:900px){
+
+    .present-card{
+
+        padding:30px;
+
+    }
+
+    #intro h1{
+
+        font-size:4rem;
+
+    }
+
+    #home h1{
+
+        font-size:3rem;
+
+    }
+
+    #presentTitle{
+
+        font-size:2.4rem;
+
+    }
+
+}
+
+@media (max-width:700px){
+
+    section{
+
+        padding:30px 15px;
+
+    }
+
+    #intro h1{
+
+        font-size:3.2rem;
+
+    }
+
+    #intro h2{
+
+        font-size:1.5rem;
+
+    }
+
+    #intro p{
+
+        padding:30px;
+
+        font-size:1rem;
+
+    }
+
+    #home main{
+
+        padding:35px 25px;
+
+    }
+
+    #home main p{
+
+        font-size:1.05rem;
+
+    }
+
+    #openPresentButton{
+
+        width:100%;
+
+    }
+
+    .present-card{
+
+        padding:25px;
+
+    }
+
+    #presentTitle{
+
+        font-size:2rem;
+
+    }
+
+    .memoryGrid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .stamps{
+
+        grid-template-columns:repeat(5,1fr);
+
+    }
+
+    .passportCard{
+
+        padding:25px;
+
+    }
+
+}
+
+@media (max-width:500px){
+
+    #settingsButton{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:22px;
+
+        top:18px;
+
+        right:18px;
+
+    }
+
+    #menuPopup{
+
+        right:18px;
+
+        width:220px;
+
+    }
+
+    #menuPopup button{
+
+        width:100%;
+
+    }
+
+    #intro h1{
+
+        font-size:2.7rem;
+
+    }
+
+    #home h1{
+
+        font-size:2.4rem;
+
+    }
+
+    .memoryGrid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .stamps{
+
+        grid-template-columns:repeat(4,1fr);
+
+    }
+
+    .stamp{
+
+        width:38px;
+
+        height:38px;
+
+        font-size:20px;
+
+    }
+
+}
+
+/* ==========================================================
+                    ANIMAÇÕES
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+section{
+
+    animation:fadeIn .35s ease;
+
+}
+
+.present-card,
+.passportCard,
+.settingsBox,
+#home main,
+#intro p{
+
+    animation:fadeUp .45s ease;
+
+}
+
+#settingsButton{
+
+    animation:float 4s ease-in-out infinite;
+
+}
+
+/* ==========================================================
+                SCROLL
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#EFE6D8;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#B68963;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#9C7353;
+
+}
+
+/* ==========================================================
+                SELEÇÃO DE TEXTO
+========================================================== */
+
+::selection{
+
+    background:#DCC9A0;
+
+    color:#5C3E29;
+
+}
+
+/* ==========================================================
+                DETALHES FINAIS
+========================================================== */
+
+hr{
+
+    border:none;
+
+    border-top:2px dashed #DCC9A0;
+
+}
+
+.present-card h1,
+.passportCard h2,
+.settingsBox h1{
+
+    color:var(--brownDark);
+
+}
+
+.present-card,
+.passportCard,
+.settingsBox,
+#home main,
+#intro p{
+
+    backdrop-filter:blur(2px);
+
+}
+
+.presentImage:hover{
+
+    transform:scale(1.01);
+
+    transition:.3s;
+
+}
+
+.playlistButton:hover{
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+}
+
+button{
+
+    transition:
+
+        transform .2s,
+
+        background .2s,
+
+        box-shadow .2s;
+
+}
+
+button:hover{
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.stamp{
+
+    background:none;
+
+    border:none;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    margin:6px;
+
+}
+
+.stamp:hover{
+
+    transform:scale(1.15);
+
+}
+
+.stamp.empty{
+
+    opacity:.35;
+
+    cursor:default;
+
+}

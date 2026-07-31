@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Travel</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- ÁUDIOS -->
+
+    <audio id="bgMusic" loop>
+        <source src="assets/sounds/background.mp3">
+    </audio>
+
+    <audio id="clickSound">
+        <source src="assets/sounds/click.mp3">
+    </audio>
+
+    <audio id="planeSound">
+        <source src="assets/sounds/plane.mp3">
+    </audio>
+
+
+    <!-- BOTÃO CONFIGURAÇÕES -->
+
+    <button id="settingsButton">
+
+        ⚙
+
+    </button>
+
+
+
+    <!-- INTRO -->
+
+    <section id="intro">
+
+        <h1>Happy Travel</h1>
+
+        <h2>A Birthday Journey</h2>
+
+        <p>
+
+            Oii.
+
+            <br><br>
+
+            Antes de tudo...
+
+            <br><br>
+
+            Quero que saiba que este não é um presente comum.
+
+            Durante os próximos 31 dias, um novo destino estará esperando por você.
+
+            Cada parada foi preparada com carinho.
+
+            Arrume as malas.
+
+            Sua viagem começa agora.
+
+        </p>
+
+        <button id="startButton">
+
+            Começar
+
+        </button>
+
+    </section>
+
+
+
+    <!-- HOME -->
+
+    <section id="home" class="hidden">
+
+        <header>
+
+            <h1>Bom dia!</h1>
+
+            <h2 id="destinationTitle">
+
+                📍 Destino 1
+
+            </h2>
+
+        </header>
+
+        <main>
+
+            <p>
+
+                Hoje existe uma surpresa esperando por você.
+
+            </p>
+
+            <button id="openPresentButton">
+
+                Viajar
+
+            </button>
+
+        </main>
+
+    </section>
+
+
+
+    <!-- PRESENTE -->
+
+    <section id="present" class="hidden">
+
+        <div class="present-card">
+
+            <h1 id="presentTitle"></h1>
+
+            <div id="presentContent"></div>
+
+            <button id="backButton">
+
+                Voltar
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PASSAPORTE -->
+
+    <section id="passport" class="hidden">
+
+        <h1>
+
+            🛂 Passaporte
+
+        </h1>
+
+        <div id="passportContent"></div>
+
+        <button id="passportBackButton">
+
+            Voltar
+
+        </button>
+
+    </section>
+
+
+
+    <!-- CONFIGURAÇÕES -->
+
+    <section id="settings" class="hidden">
+
+        <h1>
+
+            ⚙ Configurações
+
+        </h1>
+
+        <div class="settingsBox">
+
+            <label>
+
+                🎵 Música
+
+                <input
+                    type="checkbox"
+                    id="musicToggle"
+                    checked>
+
+            </label>
+
+            <label>
+
+                🔊 Sons
+
+                <input
+                    type="checkbox"
+                    id="soundsToggle"
+                    checked>
+
+            </label>
+
+            <button id="passportShortcut">
+
+                🛂 Abrir Passaporte
+
+            </button>
+
+            <hr>
+
+            <p>
+
+                Happy Travel
+
+                <br>
+
+                versão 1.0
+
+            </p>
+
+        </div>
+
+        <button id="settingsBackButton">
+
+            Voltar
+
+        </button>
+
+    </section>
+
+
+
+    <!-- SCRIPTS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/p5@2.0.3/lib/p5.js"></script>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/navegation.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/memory.js"></script>
+    <script src="js/race.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
