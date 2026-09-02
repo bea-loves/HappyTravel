@@ -1373,7 +1373,7 @@ iframe{
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:15px;
+    gap:10px;
 
     width:min(650px,100%);
 
