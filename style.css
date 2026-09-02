@@ -1371,13 +1371,13 @@ iframe{
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(2,1fr);
 
     gap:15px;
 
-    width:min(500px,100%);
+    width:min(650px,100%);
 
-    margin:25px auto;
+    margin:30px auto;
 
 }
 
